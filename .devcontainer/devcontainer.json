@@ -1,0 +1,28 @@
+{
+    "dockerComposeFile": "compose.yml",
+    "workspaceFolder": "/app",
+    "service": "app",
+    "containerUser": "vscode",
+    "portsAttributes": {
+      "80": {
+        "label": "Application",
+        "onAutoForward": "openBrowser"
+      }
+    },
+    "forwardPorts": [
+      80
+    ],
+    "features": {
+      "ghcr.io/cirolosapio/devcontainers-features/alpine-user": {},
+      "ghcr.io/cirolosapio/devcontainers-features/alpine-docker": {},
+      "ghcr.io/cirolosapio/devcontainers-features/alpine-starship": {},
+      "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh": {},
+      "ghcr.io/cirolosapio/devcontainers-features/alpine-node": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+        ]
+      }
+    }
+  }

@@ -1,0 +1,8 @@
+services:
+  app:
+    image: alpine
+    expose: [ 80 ]
+    command: top
+    volumes:
+      - ..:/app:cached
+      - ~/.zsh_history:/home/vscode/.zsh_history:rw
