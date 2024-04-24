@@ -33,6 +33,7 @@ module.exports = antfu(
       'style/max-statements-per-line': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'style/arrow-parens': ['error', 'as-needed', { requireForBlockBody: false }],
+      'eslint-comments/no-unlimited-disable': 'off',
     },
   },
   {
