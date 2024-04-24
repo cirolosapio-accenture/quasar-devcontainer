@@ -9,6 +9,7 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
 const { configure } = require('quasar/wrappers')
+const VitePluginChecker = require('vite-plugin-checker')
 
 module.exports = configure((/* ctx */) => {
   return {
@@ -69,18 +70,22 @@ module.exports = configure((/* ctx */) => {
       // viteVuePluginOptions: {},
 
       vitePlugins: [
-        ['vite-plugin-checker', {
+        VitePluginChecker.default({
+          overlay: {
+            initialIsOpen: 'error',
+          },
           eslint: {
             lintCommand: 'eslint "./**/*.{js,mjs,cjs,vue}"',
+            useFlatConfig: true,
           },
-        }, { server: false }],
+        }),
       ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
       // https: true
-      // open: true // opens browser window automatically
+      open: false, // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
