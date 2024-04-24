@@ -4,13 +4,13 @@
   "service": "app",
   "containerUser": "vscode",
   "portsAttributes": {
-    "80": {
+    "9000": {
       "label": "Application",
       "onAutoForward": "openBrowser"
     }
   },
   "forwardPorts": [
-    80
+    9000
   ],
   "features": {
     "ghcr.io/cirolosapio/devcontainers-features/alpine-user": {},

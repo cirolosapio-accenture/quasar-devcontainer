@@ -1,7 +1,7 @@
 services:
   app:
     image: alpine
-    expose: [ 80 ]
+    expose: [ 9000 ]
     command: top
     volumes:
       - ..:/app:cached
